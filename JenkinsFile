@@ -94,7 +94,7 @@ pipeline {
             }
             steps {
                 withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
-                    dir('java-maven-sonar-argoCD-k8s/spring-boot-app') {
+                    dir('java-maven-sonar-argoCD-k8s/') {
                         bat """
                         mvn sonar:sonar ^
                         -Dsonar.login=%SONAR_AUTH_TOKEN% ^
@@ -112,7 +112,7 @@ pipeline {
             steps {
                 script {
 
-                    dir('java-maven-sonar-argoCD-k8s/spring-boot-app') {
+                    dir('java-maven-sonar-argoCD-k8s/') {
                         bat "docker build -t %DOCKER_IMAGE% ."
                     }
 
