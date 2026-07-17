@@ -5,6 +5,9 @@ at the root directory of the repository.
 
 This is a MVC architecture based application where controller returns a page with title and message attributes to the view.
 
+<img width="1321" height="659" alt="image" src="https://github.com/user-attachments/assets/83745056-eb57-4df8-b966-6da0193ea89c" />
+
+
 ## Execute the application locally and access it using your browser
 
 Checkout the repo and move to the directory
