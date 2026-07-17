@@ -84,9 +84,7 @@ pipeline {
 
         stage('Build and Test') {
             steps {
-                dir('java-maven-sonar-argoCD-k8s/') {
-                    bat 'mvn clean package'
-                }
+                bat 'mvn clean package'
             }
         }
 
