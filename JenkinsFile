@@ -94,13 +94,11 @@ pipeline {
             }
             steps {
                 withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
-                    dir('java-maven-sonar-argoCD-k8s/') {
                         bat """
                         mvn sonar:sonar ^
                         -Dsonar.login=%SONAR_AUTH_TOKEN% ^
                         -Dsonar.host.url=%SONAR_URL%
                         """
-                    }
                 }
             }
         }
