@@ -10,8 +10,7 @@ This is a MVC architecture based application where controller returns a page wit
 Checkout the repo and move to the directory
 
 ```
-git clone https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero/java-maven-sonar-argocd-helm-k8s/sprint-boot-app
-cd java-maven-sonar-argocd-helm-k8s/sprint-boot-app
+git clone https://github.com/bishal1289/java-maven-sonar-argoCD-k8s/sprint-boot-app
 ```
 
 Execute the Maven targets to generate the artifacts
