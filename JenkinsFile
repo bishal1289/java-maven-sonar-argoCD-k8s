@@ -134,13 +134,13 @@ pipeline {
                     """
 
                     powershell '''
-                    (Get-Content "java-maven-sonar-argoCD-k8s\\spring-boot-app-manifests\\deployment.yml") `
+                    (Get-Content "spring-boot-app-manifests\\deployment.yml") `
                     -replace "replaceImageTag", "$env:BUILD_NUMBER" |
-                    Set-Content "java-maven-sonar-argoCD-k8s\\spring-boot-app-manifests\\deployment.yml"
+                    Set-Content "spring-boot-app-manifests\\deployment.yml"
                     '''
 
                     bat """
-                    git add java-maven-sonar-argoCD-k8s\\spring-boot-app-manifests\\deployment.yml
+                    git add spring-boot-app-manifests\\deployment.yml
                     git commit -m "Update deployment image to version %BUILD_NUMBER%"
                     git push https://%GITHUB_TOKEN%@github.com/%GIT_USER_NAME%/%GIT_REPO_NAME% HEAD:main
                     """
